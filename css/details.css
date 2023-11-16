@@ -1,0 +1,144 @@
+.background {
+    height: calc(30vh);
+    width: 100%;
+    background-color: #282828;
+    color: white;
+}
+
+.background-inner {
+    padding: 20px;
+    width: 60%;
+    margin: auto;
+    display: flex;
+}
+
+.topic-data {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.topic-type {
+    font-size: 11px;
+}
+
+.topic-title {
+    margin: 0;
+}
+
+.topic-info {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.rating-system {
+    margin: 0;
+    font-size: 11px;
+    color: orange;
+}
+
+.details-card {
+    width: 250px;
+    height: 19em;
+    box-shadow: 1px 1px 2px 0px var(--lines-color);
+    margin: 10px;
+    text-align: left;
+    background-color: var(--bd_default);
+}
+
+.details-card img {
+    width: 100%;
+    height: 50%;
+
+}
+
+.card-box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px 10px;
+    border: 1px solid var(--lines-color);
+}
+
+.card-box button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: var(--bd_default);
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--brand-secondary);
+}
+.card-box ion-icon {
+    margin: 5px;
+    font-size: 20px;
+}
+
+.card-content {
+    padding: 0 10px 0;
+}
+
+.card-content p {
+    font-size: 12px;
+}
+
+.card-content span {
+    font-weight: 700;
+}
+
+.card-box a {
+    font-weight: 400;
+}
+
+.list {
+    width: 33vw;
+    padding: 10px;   
+}
+
+.sub-topics {
+    display: flex;
+    flex-direction: column;
+}
+
+.list-title, .sub-topic {
+    background-color: var(--bd_default);
+    border: 1px solid var(--lines-color);
+    padding: 10px 20px;
+    margin: 0;
+}
+.sub-topic {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+.list ion-icon{
+    font-size: 20px;
+    color: var(--brand-secondary);
+    padding: 0 10px;
+}
+.credit{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 12px;
+    margin-top: 15px;
+    color: var(--lines-color);
+
+}
+@media (max-width: 768px) {
+    .background-inner {
+        flex-direction: column; 
+    }
+
+    .list,
+    .details-card {
+        width: 100%; 
+    }
+
+    .sub-topic {
+        font-size: 10px;
+        padding: 3% 5%;
+    }
+
+    /* Other adjustments for smaller screens */
+}
