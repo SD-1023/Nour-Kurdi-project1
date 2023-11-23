@@ -7,19 +7,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>web topics</title>
+
 </head>
 
 <body>
     <header>
         <nav class="navbar">
             <div class="container">
-                <p class="logo">Web Topics</p>
+                <a href="index.html"><h1 class="logo">Web Topics</h1></a>
                 <div class="button-container">
-                    <button class="nav-button">
+                    <button class="nav-button" id="dark">
                         <ion-icon name="moon-outline"></ion-icon>
                         <span class="button-text">Dark Mode</span>
                     </button>
-                    <button class="nav-button">
+                    <button class="nav-button" id="favoriteButton">
                         <ion-icon name="heart-outline"></ion-icon>
                         <span class="button-text">Favorite</span>
                     </button>
@@ -28,397 +29,88 @@
         </nav>
         <div class="clip-path-container"></div>
         <div class="text-container">
-            <h3 class="header">Welcome to out website!</h3>
-            <p class="discription">We have a new design that is fresh, modern, and easy to use.</p>
+            <div class="text-inner-container">
+                <h2 class="header">Welcome to out website!</h2>
+                <p class="discription">We have a new design that is fresh, modern, and easy to use.</p>
+            </div>
+
         </div>
 
     </header>
 
     <main class="main-content">
-            <section class="inner-container">
-                <div class="search-container">
-                    <div class="search-bar">
-                        <ion-icon name="search-outline"></ion-icon>
-                        <input type="text" placeholder="Search The website...">
+        <section class="container">
+            <div class="search-container">
+                <div class="search-bar">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <input type="text" placeholder="Search The website...">
+                </div>
+
+                <div class="sort">
+                    <div class="custom-dropdown">
+                        <label for="sortBy">Sort By:</label>
+                        <select class="dropdown" id="sortBy">
+                            <option value="default">Default</option>
+                        </select>
+                    </div>
+                    <div class="custom-dropdown">
+                        <label for="filterBy">Filter By:</label>
+                        <select class="dropdown" id="filterBy">
+                            <option value="default">Default</option>
+                        </select>
                     </div>
 
-                    <div class="sort">
-                        <div class="custom-dropdown">
-                            <label for="sortBy">Sort By:</label>
-                            <select class="dropdown" id="sortBy">
-                                <option value="default">Default</option>
-                            </select>
-                        </div>
-                        <div class="custom-dropdown">
-                            <label for="filterBy">Filter By:</label>
-                            <select class="dropdown" id="filterBy">
-                                <option value="default">Default</option>
-                            </select>
+                </div>
+            </div>
+            <div>
+                <h2>"24" web topics found</h2>
+            </div>
+            <div class="card-container" id="cardContainer">
+                <!-- cards go here -->
+            </div>
+        </section>
+        <section class="favorite-tap" id="favorite-tap">
+            <div class="container">
+                <h4>My Favorite Topics</h4>
+                <div class="favorite-container">
+                    <div class="favorite-card">
+                        <img src="assets/imgs/react.webp" alt="Card Image">
+                        <div class="favorite-card-content">
+                            <div class="card-title">React</div>
+                            <div class="rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-outline"></ion-icon>
+                            </div>
                         </div>
 
                     </div>
+                    <div class="favorite-card">
+                        <img src="assets/imgs/cloud.jpeg" alt="Card Image">
+                        <div class="favorite-card-content">
+                            <div class="card-title">Cloud Comp..</div>
+                            <div class="rating">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h2>"24" web topics found</h2>
-                </div>
-                <div class="card-container" id="cardContainer">
-                    <!-- cards go here -->
-                </div>
-            </section>
-            <footer>
-                <p> Developed with <ion-icon name="heart"></ion-icon> &copy; 2023</p>
-            </footer>
+            </div>
+        </section>
     </main>
-    
 
+    <footer>
+        <p> Developed with <ion-icon name="heart"></ion-icon> &copy; 2023</p>
+    </footer>
 
-    <script>
-        const cardsData = [
-            {
-                imgSrc: 'assets/imgs/html.png',
-                cardDis: 'Web Development Languages',
-                cardTitle: 'HTML',
-                rating: '★★★★★',
-                author: 'Author: sarah smith',
-                link: 'details.html'
-            },
-            {
-                imgSrc: 'assets/imgs/css.webp',
-                cardDis: 'Web Development Languages',
-                cardTitle: 'CSS',
-                rating: '★★★★★',
-                author: 'Author: david lee',
-
-            },
-            {
-                imgSrc: 'assets/imgs/javascript.jpg',
-                cardDis: 'Web Development Languages',
-                cardTitle: 'JavaScript',
-                rating: '★★★★★',
-                author: 'Author: emily chen'
-
-            },
-            {
-                imgSrc: 'assets/imgs/jquery.png',
-                cardDis: 'Web Development Languages',
-                cardTitle: 'jQuery',
-                rating: '★★★★★',
-                author: 'Author: john johnson'
-
-            },
-            {
-                imgSrc: 'assets/imgs/angular.png',
-                cardDis: 'Frontend Framework and Libraries',
-                cardTitle: 'Angular',
-                rating: '★★★★★',
-                author: 'Author: jessica davis'
-
-            },
-            {
-                imgSrc: 'assets/imgs/react.webp',
-                cardDis: 'Frontend Framework and Libraries',
-                cardTitle: 'React',
-                rating: '★★★★★',
-                author: 'Author: daniel brown'
-
-            },
-            {
-                imgSrc: 'assets/imgs/vuejs.jpeg',
-                cardDis: 'Frontend Framework and Libraries',
-                cardTitle: 'Vue.js',
-                rating: '★★★★★',
-                author: 'Author: ava jones'
-
-            },
-            {
-                imgSrc: 'assets/imgs/nodejs.webp',
-                cardDis: 'Backend Frameworks and Libraries',
-                cardTitle: 'Node.js',
-                rating: '★★★★★',
-                author: 'Author: michael kim'
-
-            },
-            {
-                imgSrc: 'assets/imgs/expressjs.webp',
-                cardDis: 'Backend Frameworks and Libraries',
-                cardTitle: 'Express.js',
-                rating: '★★★★★',
-                author: 'Author: sophia rodriguez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/ruby.jpeg',
-                cardDis: 'Backend Frameworks and Libraries',
-                cardTitle: 'Ruby on Rails',
-                rating: '★★★★★',
-                author: 'Author: william lee'
-
-            },
-            {
-                imgSrc: 'assets/imgs/django.jpeg',
-                cardDis: 'Backend Frameworks and Libraries',
-                cardTitle: 'Django',
-                rating: '★★★★★',
-                author: 'Author: olivia martinez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/flask.webp',
-                cardDis: 'Backend Frameworks and Libraries',
-                cardTitle: 'Flask',
-                rating: '★★★★★',
-                author: 'Author: ethan thompson'
-
-            },
-            {
-                imgSrc: 'assets/imgs/sql.png',
-                cardDis: 'Databases and APIs',
-                cardTitle: 'SQL',
-                rating: '★★★★★',
-                author: 'Author: madison davis'
-
-            },
-            {
-                imgSrc: 'assets/imgs/nosql.png',
-                cardDis: 'Databases and APIs',
-                cardTitle: 'NoSQL',
-                rating: '★★★★★',
-                author: 'Author: isabella wilson'
-
-            },
-            {
-                imgSrc: 'assets/imgs/restapi.jpeg',
-                cardDis: 'Databases and APIs',
-                cardTitle: 'REST APIs',
-                rating: '★★★★★',
-                author: 'Author: jacob garcia'
-
-            },
-            {
-                imgSrc: 'assets/imgs/graphql.png',
-                cardDis: 'Databases and APIs',
-                cardTitle: 'GraphQL',
-                rating: '★★★★★',
-                author: 'Author: mia brown'
-
-            },
-            {
-                imgSrc: 'assets/imgs/oauth.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'OAuth',
-                rating: '★★★★★',
-                author: 'Author: evelyn nguyen'
-
-            },
-            {
-                imgSrc: 'assets/imgs/json.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'JSON',
-                rating: '★★★★★',
-                author: 'Author: liam hernandez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/ajax.gif',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'AJAX',
-                rating: '★★★★★',
-                author: 'Author: avery perez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/websockets.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Websockets',
-                rating: '★★★★★',
-                author: 'Author: victoria kim'
-
-            },
-            {
-                imgSrc: 'assets/imgs/responsive.gif',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Responsive Design',
-                rating: '★★★★★',
-                author: 'Author: ryan jones'
-
-            },
-            {
-                imgSrc: 'assets/imgs/accessibility.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Accesibility',
-                rating: '★★★★★',
-                author: 'Author: samantha martin'
-
-            },
-            {
-                imgSrc: 'assets/imgs/ux.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'User Experience (UX)',
-                rating: '★★★★★',
-                author: 'Author: luke davis'
-
-            },
-            {
-                imgSrc: 'assets/imgs/ui.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'User Interface (UI)',
-                rating: '★★★★★',
-                author: 'Author: grace wilson'
-
-            },
-            {
-                imgSrc: 'assets/imgs/design-systems.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Design Systems',
-                rating: '★★★★★',
-                author: 'Author: noah martinez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/performance.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Performance Optimization',
-                rating: '★★★★★',
-                author: 'Author: chloe taylor'
-
-            },
-            {
-                imgSrc: 'assets/imgs/cross-browser.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Cross-Browser Compatibility',
-                rating: '★★★★★',
-                author: 'Author: david lee'
-
-            },
-            {
-                imgSrc: 'assets/imgs/seo.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Search Engine Optimization (SEO)',
-                rating: '★★★★★',
-                author: 'Author: emily kim'
-
-            },
-            {
-                imgSrc: 'assets/imgs/web-security.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Web Security',
-                rating: '★★★★★',
-                author: 'Author: gabriel hernandez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/testing.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Testing and Debugging',
-                rating: '★★★★★',
-                author: 'Author: avry perez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/ci-cd.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Continuous Integration/Continuous...',
-                rating: '★★★★★',
-                author: 'Author: madison davis'
-
-            },
-            {
-                imgSrc: 'assets/imgs/devops.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'DevOps',
-                rating: '★★★★★',
-                author: 'Author: isabella wilson'
-
-            },
-            {
-                imgSrc: 'assets/imgs/cloud.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'cloud computing',
-                rating: '★★★★★',
-                author: 'Author: jacod garcia'
-
-            },
-            {
-                imgSrc: 'assets/imgs/docker.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Docker',
-                rating: '★★★★★',
-                author: 'Author: mia brown'
-
-            },
-            {
-                imgSrc: 'assets/imgs/microservices.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Microservices',
-                rating: '★★★★★',
-                author: 'Author: evelyn nguyen'
-
-            },
-            {
-                imgSrc: 'assets/imgs/pwa.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Progressive Web Apps (PWA)',
-                rating: '★★★★★',
-                author: 'Author: liam hernandez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/wai.jpeg',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Web Accessibility Initiative (WAI)',
-                rating: '★★★★★',
-                author: 'Author: avery perez'
-
-            },
-            {
-                imgSrc: 'assets/imgs/cms.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Content Management Systems (CMS)',
-                rating: '★★★★★',
-                author: 'Author: victoria kim'
-
-            },
-            {
-                imgSrc: 'assets/imgs/analytics.png',
-                cardDis: 'Web Development Consept and T...',
-                cardTitle: 'Web Analytics',
-                rating: '★★★★★',
-                author: 'Author: ryan jones'
-
-            },
-
-        ];
-
-        const cardContainer = document.getElementById('cardContainer');
-
-        cardsData.forEach(card => {
-            const newCard = document.createElement('div');
-            newCard.classList.add('card');
-
-            newCard.innerHTML = `
-                    <a href="${card.link}">
-                        <img src="${card.imgSrc}" alt="Card Image">
-                    </a>
-                    <div class="card-content">
-                        <p class="card-dis">${card.cardDis}</p>
-                        <div class="card-title">${card.cardTitle}</div>
-                        <div class="rating">${card.rating}</div>
-                        <div class="author">${card.author}</div>
-                    </div>
-            `;
-
-            cardContainer.appendChild(newCard);
-        });
-    </script>
-
-    <script>
-        const toggleButton = document.querySelector('.nav-button'); // Assuming this button toggles dark mode
-
-        toggleButton.addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
-
+    <script src="js/navButtons.js"></script>
+    <script src="js/cards.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
